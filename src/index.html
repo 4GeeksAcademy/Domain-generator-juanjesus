@@ -1,35 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Hello Rigo with Vanilla.js</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Write your HTML code here, you can delete everything withing the body tags -->
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+  <div class="position-absolute start-0 top-0 w-100 h-100"
+    style="z-index: 0; background: radial-gradient(125% 125% at 50% 10%, black 50%, rgb(63, 2, 63) 100%);"></div>
+
+  <div class="container-fluid text-center position-relative" style="z-index: 2;">
+
+    <header class="my-5" style="color: rgb(255, 255, 255)">
+      <h1 class="display-4">Domain Generator</h1>
+    </header>
+
+    <h1 class="my-5" style="color: rgb(231, 114, 202); text-size-adjust: 80%;">Choose your domain to see examples</h1>
+
+    <div class="row">
+
+      <div class="row justify-content-center my-5 py-3">
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".net">.net</button>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".com">.com</button>
+        </div>
       </div>
+
+      <div class="row justify-content-center my-5">
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".info">.info</button>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".biz">.biz</button>
+        </div>
+      </div>
+
+      <div class="row justify-content-center my-5">
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".org">.org</button>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".edu">.edu</button>
+        </div>
+      </div>
+
     </div>
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>
-  </body>
+</body>
+
 </html>
