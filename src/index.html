@@ -2,68 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="./assets/img/4geeks.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <title>Hello Rigo with Vanilla.js</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="./assets/img/4geeks.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<title>Hello Rigo with Vanilla.js</title>
 
-  <!-- Fontawesome is our recomended library for icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+	<!-- Fontawesome is our recomended library for icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
 </head>
 
 <body>
-  <!-- Write your HTML code here, you can delete everything withing the body tags -->
-  <style>
-    body {
-      font-family: 'Press Start 2P', cursive;
-    }
-  </style>
-  <div class="position-absolute start-0 top-0 w-100 h-100"
-    style="z-index: 0; background: radial-gradient(125% 125% at 50% 10%, black 50%, rgb(63, 2, 63) 100%);"></div>
+	<!-- Write your HTML code here, you can delete everything withing the body tags -->
 
-  <div class="container-fluid text-center position-relative" style="z-index: 2;">
+	<div class="position-fixed start-0 top-0 w-100 h-100"
+		style="z-index: 0; background: radial-gradient(125% 125% at 50% 10%, black 50%, #7a18ec 100%);"></div>
 
-    <header class="my-5" style="color: rgb(255, 255, 255)">
-      <h1 class="display-4">Domain Generator</h1>
-    </header>
+	<main class="container text-center position-relative" style="z-index: 2;">
 
-    <h1 class="my-5" style="color: rgb(231, 114, 202); text-size-adjust: 80%;">Choose your domain to see examples</h1>
+		<header class="my-5" style="color: rgb(255, 255, 255)">
+			<h1 class="display-4 display-sm-5 display-xs-6">Domain Generator</h1>
+		</header>
 
-    <div class="row">
+		<h1 class="my-5" style="color: rgb(233, 29, 182); text-size-adjust: 80%;">Choose your domain to see examples
+		</h1>
 
-      <div class="row justify-content-center my-5 py-3">
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".net">.net</button>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".com">.com</button>
-        </div>
-      </div>
+		<div class="row justify-content-center my-3">
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".net">.net</button>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".com">.com</button>
+			</div>
+		</div>
 
-      <div class="row justify-content-center my-5">
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".info">.info</button>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".biz">.biz</button>
-        </div>
-      </div>
+		<div class="row justify-content-center my-3">
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".info">.info</button>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".biz">.biz</button>
+			</div>
+		</div>
 
-      <div class="row justify-content-center my-5">
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".org">.org</button>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3">
-          <button type="button" class="btn btn-outline-light btn-lg w-100 mi-boton" data-choice=".edu">.edu</button>
-        </div>
-      </div>
+		<div class="row justify-content-center my-3">
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".org">.org</button>
+			</div>
+			<div class="col-6 col-sm-4 col-md-3">
+				<button type="button" class="mi-boton w-100 " data-choice=".edu">.edu</button>
+			</div>
+		</div>
 
-    </div>
+		<section class="row justify-content-center my-5">
+			<p id="texto-fijo" style="color: rgb(255, 255, 255)">Aqui tienes tus dominios</p>
+			<div class="mt-5" id="resultadosDominio" style="color: #f7f5fa; text-size-adjust: 150%;"></div>
+		</section>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
+	</main>
+
+	<!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+	<script type="module" src="/app.js"></script>
 </body>
 
 </html>

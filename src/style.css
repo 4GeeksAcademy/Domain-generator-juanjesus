@@ -1,25 +1,59 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+  background: white;
+  font-family: 'Press Start 2P', cursive;
 }
 
+:root {
+  --color-principal: rgb(231, 114, 202);
+  --color-red: #e61919;
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+}
+
+
 .mi-boton {
-  background-color: #e471ca;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  animation: none;
+  position: relative;
+  width: 120px;
+  height: 60px;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  background: transparent;
+  border: 1px solid var(--color-purple);
+  transition: var(--speed-normal);
+  overflow: hidden;
+  line-height: 60px;
+  text-align: center;
+  padding: 0;
 }
 
 .mi-boton:hover {
-  animation: sacudir 0.5s ease;
+  border: 1px solid transparent;
+  background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
+  background-size: 180px;
+  transition-delay: 0.8s;
+  animation: animate var(--speed-fast) steps(8) forwards;
 }
 
-@keyframes sacudir {
-  0%   { transform: translateX(0); }
-  25%  { transform: translateX(-5px); }
-  50%  { transform: translateX(5px); }
-  75%  { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+
+  100% {
+    background-position-y: -480px;
+  }
+}
+
+.borde-activo {
+  border: 2px solid #7a18ec;
+  padding: 20px;
 }
